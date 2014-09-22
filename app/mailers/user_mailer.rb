@@ -9,7 +9,7 @@ class UserMailer < ActionMailer::Base
   def receive_task(user, task)
     @user = user
     @task = task
-    mail(to: @user.email, subject: 'You have a task from Skittle Monkey')
+    mail(to: @task.email, subject: 'You have a task from Skittle Monkey')
   end 
    
 end

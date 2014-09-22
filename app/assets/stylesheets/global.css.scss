@@ -19,9 +19,7 @@ header {
   margin: -50px 0 0 0 ;
   text-align: center;
   float: right;
-  border-radius: 20px 0px 0px 20px;
-
-  
+  border-radius: 20px 0px 0px 20px;  
 }
 
 h1 {
@@ -35,13 +33,10 @@ h1 {
   text-align: left; 
 }
 
-
-
 h2 {
   font-family: $fun-font;
   font-size:24px; 
 }
-
 
 #logo{
   padding-top: 40px;
@@ -140,8 +135,7 @@ margin: 0 0 0 30px;
   border: none;
   border-radius: 10px;
   background:#F0F0F0;
-  width: 50%;
-   
+  width: 50%;   
 }
 
 #feature input.submit {
@@ -189,12 +183,11 @@ margin: 0 0 0 30px;
   text-decoration: none;
 }
 
-
 #leftColumn {
   width: 20%;
   background-color: #CCCCCC;
   float: left;
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 20px;
   height: 580px;
   margin: 10px 0 0 40px;
 }
