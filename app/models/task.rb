@@ -18,11 +18,11 @@ class Task < ActiveRecord::Base
         :subject     => "#{current_user}" + "has assigned you a task",
         :body        => "Your task is " + "#{self.description}. Check it out at http://skittlemonkey-taskmanager.herokuapp.com/!",
         :via_options => {
-          :address              => 'smtp.gmail.com',
+          :address              => ENV['MY_EMAIL'],
           :port                 => '587',
           :enable_starttls_auto => true,
-          :user_name            => 'skittlemonkey2000',
-          :password             => 'tastetherainbow',
+          :user_name            => 'kthrnschrdr',
+          :password             => 'cindyloohoo',
           :authentication       => :plain, # :plain, :login, :cram_md5, no auth by default
           :domain               => "localhost.localdomain" # the HELO domain provided by the client to the server
       

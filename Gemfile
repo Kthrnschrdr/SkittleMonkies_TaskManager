@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.19'
 
+gem 'dotenv-rails', :groups => [:development, :test]
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -40,3 +42,4 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # gem 'debugger'
 
 # Pony.mail(:to => 'you@example.com', :from => 'me@example.com', :subject => 'hi', :body => 'Hello there.')
+

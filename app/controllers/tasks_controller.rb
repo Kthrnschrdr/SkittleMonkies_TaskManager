@@ -15,10 +15,10 @@ class TasksController < ApplicationController
     # end
     # @tasks.each do |task|
     #   if task.category_id.nil?
-    #     binding.pry
+    #  
     #     @list["Uncategorized"] << task
     #   else
-    #     binding.pry
+    #    
     #     @list[task.category_id] << task
     #   end
     # end
