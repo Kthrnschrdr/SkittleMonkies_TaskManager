@@ -1,4 +1,6 @@
-
+$fun-font: 'Syncopate', sans-serif;
+$unfun-font: 'Cuprum', sans-serif;
+$accent-color: #00A0B0;
 
 html {
   z-index: -10;
@@ -11,7 +13,7 @@ html {
 }
 
 header {
-  font-family: 'Cuprum', sans-serif;
+  font-family: $unfun-font;
   height: 40px;
   width: 20%;
   margin: -50px 0 0 0 ;
@@ -25,7 +27,7 @@ header {
 h1 {
   font-family: 'Francois One', sans-serif;
   font-size:35px;
-  color:#00A0B0;
+  color: $accent-color;
   opacity: .7;
   float: left;
   padding-top: 50px;
@@ -36,7 +38,7 @@ h1 {
 
 
 h2 {
-  font-family: 'Syncopate', sans-serif;
+  font-family: $fun-font;
   font-size:24px; 
 }
 
@@ -87,7 +89,7 @@ margin: 0 0 0 30px;
 }
 
 #nav li {
-  font-family: 'Syncopate', sans-serif;
+  font-family: $fun-font;
   font-size: 12px;
   display: inline;
   margin-left: 30px;
@@ -97,7 +99,7 @@ margin: 0 0 0 30px;
 }
 
 #subhead {
-  font-family: 'Syncopate', sans-serif;
+  font-family: $fun-font;
   width: 75%;
   background-color: #ffffff;
   float: right;
@@ -124,7 +126,7 @@ margin: 0 0 0 30px;
 
 #feature input{
   width:50%;
-  font-family: 'Cuprum', sans-serif;
+  font-family: $unfun-font;
   text-align: left;
   padding-left: 20px;
   font-size:15px;
@@ -160,7 +162,7 @@ margin: 0 0 0 30px;
   font-family: 'Francois One', sans-serif;
   opacity:.7;
   margin:0 auto;
-  color:#00A0B0;
+  color: $accent-color;
   text-align: left;
 }
 
@@ -174,7 +176,7 @@ margin: 0 0 0 30px;
 }
 
 #feature li{
-  font-family: 'Cuprum', sans-serif;
+  font-family: $unfun-font;
   list-style-type: none;
   font-size: 20px;
   text-align: left;
@@ -206,7 +208,7 @@ margin: 0 0 0 30px;
 
 #leftColumn li {
   width: 95%;
-  font-family: 'Syncopate', sans-serif;
+  font-family: $fun-font;
   list-style-type: none;
   background: #ffffff;
   padding-bottom: 15px;
@@ -218,7 +220,7 @@ margin: 0 0 0 30px;
 }
 
 #signup {
-  font-family: 'Cuprum', sans-serif;
+  font-family: $unfun-font;
   width: 40%;
   height: auto;
   background-color: #CCCCCC;
@@ -233,7 +235,7 @@ margin: 0 0 0 30px;
 input{
   width:50%;
   border: none;
-  font-family: 'Cuprum', sans-serif;
+  font-family: $unfun-font;
   text-align: center;
   font-size:15px;
   height: 30px;
@@ -277,7 +279,7 @@ a:visited {
 }
 
 a:hover {
-  color: #00A0B0;
+  color: $accent-color;
   text-decoration: none;
 } 
 

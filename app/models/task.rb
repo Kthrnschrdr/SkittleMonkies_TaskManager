@@ -13,6 +13,7 @@ class Task < ActiveRecord::Base
       puts "Email field was empty"
     else        
       UserMailer.recieve_task(@user, @task).deliver
+    end
   end
 
 end
