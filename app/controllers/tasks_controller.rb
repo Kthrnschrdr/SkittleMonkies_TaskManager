@@ -9,19 +9,6 @@ class TasksController < ApplicationController
       @tasks = current_user.tasks
       @categories = current_user.categories
     end
-    # @list = {}
-    # @categories.each do |x|
-    #   @list[x.id] = []
-    # end
-    # @tasks.each do |task|
-    #   if task.category_id.nil?
-    #  
-    #     @list["Uncategorized"] << task
-    #   else
-    #    
-    #     @list[task.category_id] << task
-    #   end
-    # end
   end
 
   def new
@@ -38,7 +25,6 @@ class TasksController < ApplicationController
     @user = User.where(:email => current_user.email)
     
     if @task.save
-      # @task.create_activity :create, owner: current_user
       UserMailer.receive_task(@user, @task).deliver
       redirect_to tasks_path
     else
