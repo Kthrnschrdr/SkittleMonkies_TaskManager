@@ -39,7 +39,7 @@ class TasksController < ApplicationController
     
     if @task.save
       @task.create_activity :create, owner: current_user
-      @task.send_email(@user)
+      UserMailer.receive_task(@user, @task).deliver
       redirect_to tasks_path
     else
       render "new"
