@@ -2,8 +2,8 @@ class UserMailer < ActionMailer::Base
   default from: "skittlemonkeytaskmanager@gmail.com"
   
   def welcome_email(user)
-      @user = user
-      mail(to: @user.email, subject: 'Welcome to Skittle Monkey Task Manager')
+    @user = user
+    mail(to: @user.email, subject: 'Welcome to Skittle Monkey Task Manager')
   end
   
   def receive_task(user, task)

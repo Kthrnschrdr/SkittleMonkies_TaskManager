@@ -35,10 +35,10 @@ class TasksController < ApplicationController
     @task.project_id = (params[:project_id]).to_i
     @task.category_id = (params[:category_id]).to_i
     @task.user_id = current_user.id
-    @user = current_user.email
+    @user = User.where(:email => current_user.email)
     
     if @task.save
-      @task.create_activity :create, owner: current_user
+      # @task.create_activity :create, owner: current_user
       UserMailer.receive_task(@user, @task).deliver
       redirect_to tasks_path
     else

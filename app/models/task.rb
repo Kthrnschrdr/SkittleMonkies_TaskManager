@@ -8,12 +8,12 @@ class Task < ActiveRecord::Base
   belongs_to :category  
   has_many :comments
   
-  def send_email(current_user)
-    if self.email == ""
-      puts "Email field was empty"
-    else        
-      UserMailer.recieve_task(@user, @task).deliver
-    end
-  end
+  # def send_email(user, task)
+ #    if self.email == ""
+ #      puts "Email field was empty"
+ #    else
+ #      UserMailer.receive_task(@task).deliver
+ #    end
+ #  end
 
 end
