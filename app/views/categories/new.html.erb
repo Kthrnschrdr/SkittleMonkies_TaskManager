@@ -1,24 +1,5 @@
-<div id= 'leftColumn'>
-  <ul>
-  <li><%= link_to("New Task", new_task_path) %></li>
-  <li><%= link_to("Create Category", add_category_path) %></li>
-	<li><%= link_to "Tasks", tasks_path %></li>
-	<li><%= link_to "Projects", projects_path %></li>
-  
-  <ul>
-</div>
-
-<div id = 'feature'>
 <h2>Add Category</h2>
-
 <%= form_for @category, :url => create_category_path do |c| %>
-
-  <p>
-    <%= c.label :name %>
-    <%= c.text_field :name %>
-  </p>
-  
-  <%= c.submit "Make catagory", :class => 'submit' %>
+	<p><%= c.text_field :name, :placeholder => "Name" %></p>
+  	<p><%= c.submit "Make catagory", :class => 'submit' %></p>
 <% end %>
-
-</div>
