@@ -1,35 +1,24 @@
 <div id= 'leftColumn'>
   <ul>
-  <li><%= link_to("New Task", new_task_path) %></li>
-  <li><%= link_to("Create Category", add_category_path) %></li>
-	<li><%= link_to "Tasks", tasks_path %></li>
-	<li><%= link_to "Projects", projects_path %></li>
-  
-  <ul>
+  	<li><%= link_to("New Task", new_task_path) %></li>
+  	<li><%= link_to("Create Category", add_category_path) %></li>
+  	<li><%= link_to "Tasks", tasks_path %></li>
+  	<li><%= link_to "Projects", projects_path %></li>
+  </ul>
 </div>
 
 <div id = 'feature'>
-<h2>New Task</h2>
-
-
-<%= form_for @task do |f| %>
-
-	<p><%= f.text_field :task_name, :placeholder => "Task Name"  %></p>
-
-
-	<p><%= f.text_field :status, :placeholder => "Status"  %></p>
-
- 
-    <p><%= f.text_field :email, :placeholder => "Email"  %></p>
-
-
-	<p><%= f.text_area :description, :placeholder => "Description"  %></p>
-
-	<%= select_tag 'project_id', options_for_select(@projects.map{|project| ["#{project.title}", project.id] }. insert(0, "Select a Service")) %>
-	<%= select_tag 'category_id', options_for_select(@categories.map{|category| ["#{category.name}", category.id] }. insert(0, "Select a Service"))%>
-   <p> or create a category: 
-	<%=  f.text_field :new_category%></p>
-	<p><%= f.submit "Make Task", :class => 'submit' %></p>
-
-<% end %>
+	<h2>New Task</h2>
+	<%= form_for @task do |f| %>
+		<p><%= f.text_field :task_name, :placeholder => "Task Name"  %></p>
+		<p><%= f.text_field :status, :placeholder => "Status"  %></p>
+	    <p><%= f.text_field :email, :placeholder => "Email"  %></p>	
+		<p><%= f.text_area :description, :placeholder => "Description"  %></p>
+		<%= select_tag 'project_id', options_for_select(@projects.map{|project| ["#{project.title}", project.id] }. insert(0, "Select 		a Project")) %>
+		<%= select_tag 'category_id', options_for_select(@categories.map{|category| ["#{category.name}", category.id] }. insert(0, 		"Select a Category"))%>
+	   <p> or create a category: 
+	   <%=  f.text_field :new_category%></p>
+	   <p><%= f.submit "Make Task", :class => 'submit' %></p>
+	<% end %>
 </div>
+

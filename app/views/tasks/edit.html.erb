@@ -1,20 +1,23 @@
-<h2>Edit Task</h2>
+<div id= 'leftColumn'>
+  <ul>
+  	<li><%= link_to("New Task", new_task_path) %></li>
+  	<li><%= link_to("Create Category", add_category_path) %></li>
+  	<li><%= link_to "Tasks", tasks_path %></li>
+  	<li><%= link_to "Projects", projects_path %></li>
+  </ul>
+</div>
 
-
-<%= form_for @task do |f| %>
-
-	<%= f.label :task_name %>
-	<%= f.text_field :task_name %>
-
-	<%= f.label :status %>
-	<%= f.text_field :status %>
-
-	<%= f.label :description %>
-	<%= f.text_area :description %>
-	
-	<%= select_tag 'project_id', options_for_select(@projects.map{|project| ["#{project.title}", project.id] }) %>
-	<%= select_tag 'category_id', options_for_select(@categories.map{|category| ["#{category.name}", category.id] }) %>
-
-	<%= f.submit %>
-
-<% end %>
+<div id = 'feature'>
+	<h2>Edit Task</h2>
+	<%= form_for @task do |f| %>
+		<p><%= f.text_field :task_name, :placeholder => "Task Name"  %></p>
+		<p><%= f.text_field :status, :placeholder => "Status"  %></p>
+	    <p><%= f.text_field :email, :placeholder => "Email"  %></p>	
+		<p><%= f.text_area :description, :placeholder => "Description"  %></p>
+		<%= select_tag 'project_id', options_for_select(@projects.map{|project| ["#{project.title}", project.id] }. insert(0, "Select 		a Project")) %>
+		<%= select_tag 'category_id', options_for_select(@categories.map{|category| ["#{category.name}", category.id] }. insert(0, 		"Select a Category"))%>
+	   <p> or create a category: 
+	   <%=  f.text_field :new_category%></p>
+	   <p><%= f.submit "Edit this Task", :class => 'submit' %></p>
+	<% end %>
+</div>
