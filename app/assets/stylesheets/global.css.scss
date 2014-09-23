@@ -1,4 +1,5 @@
 $fun-font: 'Syncopate', sans-serif;
+$midfun-font: 'Francois One', sans-serif;
 $unfun-font: 'Cuprum', sans-serif;
 $accent-color: #00A0B0;
 
@@ -23,7 +24,7 @@ header {
 }
 
 h1 {
-  font-family: 'Francois One', sans-serif;
+  font-family: $midfun-font;
   font-size:35px;
   color: $accent-color;
   opacity: .7;
@@ -117,9 +118,9 @@ margin: 0 0 0 30px;
   margin-right: 40px;
   display: inline;
   padding:30px;
-}
 
-#feature input{
+
+ input{
   width:50%;
   font-family: $unfun-font;
   text-align: left;
@@ -129,58 +130,59 @@ margin: 0 0 0 30px;
   background:#F0F0F0;
   border: none;
   border-radius: 10px;
-}
+  }
 
-#feature textarea{
+ textarea{
   border: none;
   border-radius: 10px;
   background:#F0F0F0;
   width: 50%;   
-}
+  }
 
-#feature input.submit {
+  input.submit {
   padding: 5px;
   font-size: 18px;
   width:auto;
   border-radius:5px;
   background-color: #F4533A;
   opacity: .70;
-}
+  }
 
-#feature select{
+  select{
   width:200px;
   height:30px;
-}
+  }
 
-#feature h2{
-  font-family: 'Francois One', sans-serif;
+  h2{
+  font-family: $midfun-font;
   opacity:.7;
   margin:0 auto;
   color: $accent-color;
   text-align: left;
-}
+  }
 
-#feature h3{
-  font-family: 'Francois One', sans-serif;
+  h3{
+  font-family: $midfun-font;
   font-size: 12px;
   opacity:.7;
   margin:0 auto;
   color:#AAAAAA;
   text-align: left;
-}
+  }
 
-#feature li{
+  li{
   font-family: $unfun-font;
   list-style-type: none;
   font-size: 20px;
   text-align: left;
   padding: 20px;
   margin-left: 50px
-}
+  }
 
-#feature a:hover {
+  a:hover {
   color: #F4533A;
   text-decoration: none;
+  }
 }
 
 #leftColumn {
@@ -190,16 +192,15 @@ margin: 0 0 0 30px;
   border-radius: 20px;
   height: 580px;
   margin: 10px 0 0 40px;
-}
-
-#leftColumn ul {
+  
+  ul {
   margin: 70px 0 0 0;
   width: 100%;
   opacity: 1;
   padding-left: 15px;
-}
+  }
 
-#leftColumn li {
+  li {
   width: 95%;
   font-family: $fun-font;
   list-style-type: none;
@@ -210,6 +211,7 @@ margin: 0 0 0 30px;
   padding-left: 15px;
   opacity: 1;
   border-radius: 5px;
+  }
 }
 
 #signup {
@@ -233,14 +235,14 @@ input{
   font-size:15px;
   height: 30px;
   border-radius: 10px;
-}
    
-input.submit {
+  .submit {
   font-size: 20px;
   width:200px;
   border-radius:5px;
   background-color: #F4533A;
   opacity: .80;
+  }
 }
 
 p#alert {
